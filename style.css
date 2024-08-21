@@ -1,0 +1,214 @@
+
+body {
+    
+    background-color: rgba(22, 2, 68, 0.925);
+    
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(14, 15, 70);
+    height: 65em;
+    width: 95em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;   
+}
+
+#menu {
+    position: absolute;
+    top: 53%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgb(77, 8, 117);
+    width: 30em;
+    height: 43em;
+    color: yellow;
+    border-radius: 2em;
+    display: block;
+
+}
+
+#continue{
+    display: none;
+}
+
+#goToInstrutions {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgb(77, 8, 117);
+    width: 60em;
+    height: 40em;
+    color: yellow;
+    border-radius: 2em;
+    display: none;
+
+}
+
+#instructionsTitle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    
+    
+
+}
+
+#instructionsList {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    width: 30em;
+    text-align: left;
+
+}
+
+li {
+    padding: 10px;
+}
+
+#returnToMenu {
+    position: absolute;
+    top: 80%;
+    
+}
+
+#goToCredits {
+    position: absolute;
+    top: 87%;
+    left: 33%;
+    height: 2em;
+    width: 4.5em;
+    font-size: 3em;
+}
+
+#credits {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgb(77, 8, 117);
+    width: 40em;
+    height: 40em;
+    color: yellow;
+    border-radius: 2em;
+    display: none;
+}
+
+#creditsList {
+    position: absolute;
+    top: 30%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    width: 30em;
+    text-align: justify;
+
+}
+
+#returnToMenu2 {
+    position: absolute;
+    top: 75%;
+    
+}
+
+#mute {
+    position: absolute;
+    top: 87%;
+    left: 77%;
+    height: 2em;
+    width: 2.5em;
+    font-size: 3em;
+    display: block;
+}
+
+#unmute {
+    position: absolute;
+    top: 87%;
+    left: 77%;
+    height: 2em;
+    width: 2.5em;
+    font-size: 3em;
+    display: none;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+
+
+#return {
+    display: none;
+}
+
+h1 {
+    font-size: 4em;
+    
+    
+}
+
+button {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:block;
+    margin-bottom: 1em;
+    font-size: 4em;
+    height: 2.5em;
+    width: 6em;
+    background-color: rgb(77, 8, 117);
+    border: solid 5px yellow;
+    color: yellow;
+    border-radius: 0.5em;
+    
+}
+
+button:hover {
+    color: yellow;
+    background-color: rgb(93, 12, 168);
+    border: solid 5px yellow;
+}
+
+
+#game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 800px;
+    border: 2px solid black;
+} 
+
+#canvas1 {
+    background-image: url("Images/background.png");
+    background-size: 1200px 800px;
+    cursor: default;
+}
+

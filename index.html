@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <title>Broomy Witch</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div id="menu">
+                <h1 id="title">Broomy Witch</h1>
+                <button id="play" onclick="startGame()">Play</button>
+                <button id="continue" onclick="unpauseGame()">Continue</button>
+                <button id="return" onClick="window.location.reload(true);">Return</button>
+                <button id ="goToInstrutions" onClick="displayInstructionsMenu()">Controls</button>
+                <button id = "goToCredits" onClick ="displayCredits()">Credits</button>
+                <button id = "mute" onClick ="mute()"> <img src ="Images/mute.png"/></button>
+                <button id = "unmute" onClick ="unmute()"> <img src ="Images/unmute.png"/> </button>
+            </div>
+            <div id = "instructions">
+                <h1 id="instructionsTitle">CONTROLS</h1>
+                <ul id = "instructionsList">
+                    <li>SPACEBAR or ARROW UP: fly up</li>
+                    <li>Z or ARROW RIGHT: cast a spell</li>
+                    <li>P: pause and upause</li>
+                    <li>M: mute and unmute</li>
+                </ul>
+                <button id = "returnToMenu" onClick ="backToMenu()">Return</button>
+            </div>
+            <div id = "credits">
+                <h1 id = "creditsTitle">CREDITS</h1>
+                <ul id = "creditsList">
+                    <li>Art made with Krita</li>
+                    <li>Music made with Musescore 4</li>
+                </ul>
+                <button id = "returnToMenu2" onClick ="backToMenu2()">Return</button>
+            </div>
+            <div id="game">
+                <canvas id="canvas1"></canvas>
+                <script src="Scripts/witch.js"></script>
+                <script src="Scripts/obstacles.js">startgame()</script>
+                <script src="Scripts/enemy.js"></script>
+                <script src="Scripts/enemy2.js"></script>
+                <script src="Scripts/main.js"></script>
+            </div>    
+        </main>        
+    </body>
+</html>
