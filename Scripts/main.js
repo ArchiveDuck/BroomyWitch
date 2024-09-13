@@ -6,6 +6,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = 1200;
 canvas.height = 800;
 
+
+
+
 //GLOBAL VARIABLES
 
 let spacePressed = false; //related to flying up and flying animation
@@ -78,6 +81,7 @@ spellCast.volume = 0.5; //decreases volume to half
 let x = 1;
 const bgImage = document.getElementById('canvas1');
 
+
 function moveBackground(){ //moves background image by gamespeed
   x -=gamespeed *0.8;
   bgImage.style.backgroundPositionX = x + "px";
@@ -145,6 +149,10 @@ function animate(){
     return; //makes animation loop stop
    } 
 
+   
+   if (window.innerHeight <= 800 || window.innerWidth <= 1200){
+    adjustZoom();
+   }
    //debug();
    if (gamePaused === false){
     requestAnimationFrame(animate); //repeats the function each frame
@@ -154,6 +162,38 @@ function animate(){
 
 animate(); //calls the animate function at start
 
+
+//ADJUST FOR SMALLER SCREEN SIZE - LAPTOP
+function adjustZoom(){
+        document.body.style.zoom = "70%";
+        document.getElementById("menu").style.width = "21em";
+        document.getElementById("menu").style.height = "30em";
+        document.getElementById("menu").style.left = "65%";
+        document.getElementById("play").style.fontSize = "2.8em";
+        document.getElementById("return").style.fontSize = "2.8em";
+        document.getElementById("goToInstrutions").style.fontSize = "2.8em";
+        document.getElementById("continue").style.fontSize = "2.8em";
+        document.getElementById("returnToMenu").style.fontSize = "2.8em";
+        document.getElementById("returnToMenu2").style.fontSize = "2.8em";
+        document.getElementById("goToCredits").style.fontSize = "2.1em";
+        document.getElementById("mute").style.width = "1.75em";
+        document.getElementById("mute").style.height = "1.4em";
+        document.getElementById("unmute").style.width = "1.75em";
+        document.getElementById("unmute").style.height = "1.4em";
+        document.getElementById("muteimg").style.width = "1em";
+        document.getElementById("muteimg").style.height = "1em";
+        document.getElementById("unmuteimg").style.width = "1em";
+        document.getElementById("unmuteimg").style.height = "1em";
+        document.getElementById("title").style.fontSize = "2.5em";
+        document.getElementById("instructions").style.width = "42em";
+        document.getElementById("instructions").style.height = "28em";
+        document.getElementById("instructionsList").style.fontSize = "1.4em";
+        document.getElementById("instructionsTitle").style.fontSize = "2.8em";
+        document.getElementById("credits").style.width = "28em";
+        document.getElementById("credits").style.height = "28em";
+        document.getElementById("creditsList").style.fontSize = "1.4em";
+        document.getElementById("creditsTitle").style.fontSize = "2.8em";    
+}
 
 
 //SCORE
@@ -406,23 +446,21 @@ window.onkeydown = function(e) { //prevents sideway scrolling when arrow right i
 
 
 //DEBUG -- ACTIVATE DEBUG FUNCTION IN ANIMATE();
-/*
 
+/*
 function debug(){
     ctx.fillStyle = 'yellow';
     ctx.font = '3em Arial, Helvetica, sans-serif';
     //ctx.strokeText(INSTERT VARIABLE, x, y); 
     //ctx.fillText(INSTERT VARIABLE, x, y); 
-    ctx.strokeText(obstacleSpeed, 200, 70); 
-    ctx.fillText(obstacleSpeed, 200, 70); 
-    ctx.strokeText(obstacleTimer, 500, 70); 
-    ctx.fillText(obstacleTimer, 500, 70); 
-    ctx.strokeText(obstacleType, 600, 70); 
-    ctx.fillText(obstacleType, 600, 70); 
-    ctx.strokeText(frame, 50, 70); 
-    ctx.fillText(frame, 50, 70);
+    ctx.strokeText(document.body.clientWidth, 50, 270); 
+    ctx.fillText(document.body.clientWidth, 50, 270);
+    ctx.strokeText(window.innerHeight, 300, 270); 
+    ctx.fillText(window.innerHeight, 300, 270);
 }
+
 */
+
 
 
 
