@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <main>
+        <main id = Main>
             <div id="menu">
                 <h1 id="title">Broomy Witch</h1>
                 <button id="play" onclick="startGame()">Play</button>
@@ -15,8 +15,8 @@
                 <button id="return" onClick="window.location.reload(true);">Return</button>
                 <button id ="goToInstrutions" onClick="displayInstructionsMenu()">Controls</button>
                 <button id = "goToCredits" onClick ="displayCredits()">Credits</button>
-                <button id = "mute" onClick ="mute()"> <img src ="Images/unmute.png"/></button>
-                <button id = "unmute" onClick ="unmute()"> <img src ="Images/mute.png"/> </button>
+                <button id = "mute" onClick ="mute()"> <img id="muteimg" src ="Images/unmute.png"/></button>
+                <button id = "unmute" onClick ="unmute()"> <img id="unmuteimg" src ="Images/mute.png"/> </button>
             </div>
             <div id = "instructions">
                 <h1 id="instructionsTitle">CONTROLS</h1>
