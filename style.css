@@ -1,20 +1,25 @@
 
 body {
+    
     background-color: rgba(22, 2, 68, 0.925);
+    margin: 0;
     height: 100%;
-    width: 100%;   
+    width: 100%;
+    overflow: hidden;
+    
 }
 
-main {
+#Main {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(14, 15, 70);
-    height: 65em;
-    width: 95em;
+    height: 65em; 
+    width: 95em; 
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;   
+    text-align: center;  
+     
 }
 
 #menu {
@@ -29,6 +34,7 @@ main {
     color: yellow;
     border-radius: 2em;
     display: block;
+    
 
 }
 
@@ -202,13 +208,14 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1200px;
-    height: 800px;
+    height: 800px; 
     border: 2px solid black;
+    align-items: center;
 } 
 
 #canvas1 {
     background-image: url("Images/background.png");
     background-size: 1200px 800px;
-    cursor: default;
+    cursor: default;    
 }
 
