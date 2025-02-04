@@ -462,6 +462,53 @@ function debug(){
 */
 
 
+function retry() {
+    isDead = false;
+    gamespeed = 6;
+    score = 0;
+    frame = 0;
+    batsKilled = 0;
+    witch.x = 150; //starting position horizontal - this doesn't change during the game
+    witch.y = 200; //starting position vertical - this changes during the game
+    witch.xCutout = witch.width * 3;
+    witch.weight = 3.5;
+    spellShot = false;
+
+    x = 0; //resets background image;
+    gameTheme.currentTime = 0;
+
+    bat.x = 1200 + batDistance;
+    bat.y = Math.floor(Math.random() * (650 - 150) + 150);
+    bat2.x = 1200 + batDistance;
+    bat2.y = Math.floor(Math.random() * (650 - 150) + 150);
+    batDistanceMax = 4500;
+    batdistanceMin = 3500;
+    batDistance = Math.floor(Math.random() * (batDistanceMax - batdistanceMin) + batdistanceMin); //generates random value between two values to determine how far away past screen edge bat spawns
+    batAnimationSpeed = 4;
+
+    obstaclesArray.x = canvas.width; //resets obstacles out of sight
+    obstaclesArray.splice(0, 15); //removes obstacles from previous game from the screen
+
+    document.getElementById("menu").style.display = "none"; //hides the menu on game start
+    document.getElementById("canvas1").style.cursor = "none"; //hides cursor on game start
+    gamestart = true; //determines if obstacles are allowed to spawn
+    menuTheme.pause();
+    if (muted === false){
+    gameTheme.play(); //plays audiofile
+    }
+    obstacleSpeed = 50; //how fast obstacles follow up after each other
+    maxModifier = 120; //max 380
+    minModifier = 60; // max 190
+    obstacleModifier = Math.floor(Math.random() * maxModifier - minModifier);
+    startValueTop = 250; //max 530 with all other values 0
+    startValueBottom = 250; //max 530 with all other values 0
+    minValue = 150; //minimum height of obstacles
+    obstacleType = 1; //number that defines what type of obstacles (height, speed etc.) are generated
+    obstacleWidth = 50;
+    broomSpeed = 10;
+    fallSpeed = 10;
+    animate();
+}
 
 
 

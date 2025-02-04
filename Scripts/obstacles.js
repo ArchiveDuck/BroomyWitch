@@ -72,7 +72,7 @@ function generateObstacleType(){ //generates a random number every x frames that
 }
 
 function handleObstacles(){
-    if (frame%obstacleSpeed === 0 && gamestart === true){ //creates new obstacle every x frames, after the game has started
+    if (frame%obstacleSpeed === 0 && gamestart === true && frame > 50){ //creates new obstacle every x frames, after the game has started
         obstaclesArray.unshift(new Obstacle);
     }
     for (let i = 0; i < obstaclesArray.length; i++){
