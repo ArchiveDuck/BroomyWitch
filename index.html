@@ -13,7 +13,7 @@
                 <h1 id="title">Broomy Witch</h1>
                 <button id="play" onclick="startGame()">Play</button>
                 <button id="continue" onclick="unpauseGame()">Continue</button>
-                <button id="return" onClick="window.location.reload(true);">Return</button>
+                <button id="return" onclick="retry()">Retry</button> <!--onClick="window.location.reload(true);"-->
                 <button id ="goToInstrutions" onClick="displayInstructionsMenu()">Controls</button>
                 <button id = "goToCredits" onClick ="displayCredits()">Credits</button>
                 <button id = "mute" onClick ="mute()"> <img id="muteimg" src ="Images/unmute.png"/></button>
@@ -43,7 +43,7 @@
                 <script src="Scripts/obstacles.js">startgame()</script>
                 <script src="Scripts/enemy.js"></script>
                 <script src="Scripts/enemy2.js"></script>
-                <script src="Scripts/main.js"></script>
+                <script src="Scripts/main.js">retry()</script>
             </div>    
         </main>        
     </body>
